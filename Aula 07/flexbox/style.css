@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -80,4 +81,88 @@ section {
     justify-content: center;
     align-items: center;
     color: white;
+=======
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  .container {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    width: 100%;
+    height: 100px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header div {
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header div nav ul {
+    display: flex;
+    background-color: aqua;
+    gap: 32px;
+  }
+  
+  main {
+    width: 80%;
+    height: 100%;
+    background-color: darkred;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+
+aside {
+    background-color: darkgoldenrod;
+    width: 200px;
+    gap: 20px;
+
+}
+
+main article {
+    background-color: darkgreen;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+section {
+    background-color: aqua;
+    height: 100%; 
+
+}
+
+  footer {
+    width: 100%;
+    height: 100px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+>>>>>>> c5e5dd2c1fb7a257352d0ea160ee373c5fb4dada
   }
