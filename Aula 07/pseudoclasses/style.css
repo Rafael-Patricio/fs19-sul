@@ -1,0 +1,42 @@
+
+a:visited {
+    color: red;
+  }
+  
+  a:hover {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  button {
+    color: white;
+    background-color: darkblue;
+  }
+  
+  button:hover {
+    background-color: darkred;
+  }
+  
+  button:active {
+    background-color: darkgreen;
+  }
+  
+  input:disabled {
+    background-color: darkgoldenrod;
+  }
+  
+  ul li:nth-child(3) {
+    color: darkgreen;
+  }
+  
+  ul li:nth-child(even) {
+    color: red;
+  }
+  
+  ul li:last-child {
+    color: blue;
+  }
+  
+  ul li:first-child {
+    color: blueviolet;
+  }
