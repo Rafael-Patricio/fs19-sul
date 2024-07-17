@@ -1,0 +1,52 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.cabecalho {
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100vw;
+    align-items: center;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.sobre {
+    background-color: green;
+    border-radius: 6px;
+    padding: 7px;
+    width: 50vw;
+}
+.projetos {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    border-radius: 6px;
+    padding: 7px;
+    width: 50vw;
+    gap: 20px;
+    height: 44vh;
+}
+.projeto {
+    background-color: rgb(73, 21, 137);
+    border-radius: 6px;
+    padding: 7px;
+}
+.pe {
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100vw;
+    align-items: center;
+}
