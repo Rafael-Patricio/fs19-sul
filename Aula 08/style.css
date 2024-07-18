@@ -26,22 +26,38 @@
     border-radius: 6px;
     padding: 7px;
     width: 50vw;
+    color: rgb(255, 255, 255);
 }
 .projetos {
     display: flex;
-    flex-direction: column;
+    color: rgb(255, 255, 255);
+    
     background-color: green;
     border-radius: 6px;
     padding: 7px;
     width: 50vw;
     gap: 10px;
-    height: 38vh;
+    height: 100vh;
+    align-items: left;
+    flex-wrap: wrap;
 }
 .projeto {
     background-color: rgb(73, 21, 137);
     border-radius: 6px;
     padding: 7px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
 }
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+ }
 .pe {
     background-color: darkblue;
     color: white;
