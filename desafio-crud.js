@@ -1,37 +1,71 @@
-let listaDeProdutos = []
-//CiarAlunos(nome, idade, serie) - criar com o id, recebe os dados, menos o id
-function criarProduto(produto) { listaDeProdutos.push({id: listaDeProdutos.length, ...produto}) }
-criarProduto({ nome: 'Copo', preço: 26, serie: '6B'})
-criarProduto({ nome: 'Prato', preço: 29, serie: '7B'})
-criarProduto({ nome: 'Arroz', preço: 23, serie: '5C'})
-console.log(alunos)
-
-// lerAlunos() - recebe o id como parametro e retorna o aluno
-
-function lerAluno(id) { 
-    const aluno = alunos.find(alunos => alunos.id === id)
-    return aluno
+let Produtos = []
+//CiarProduto(nome, preço, categoria) - criar com o id, recebe os dados, menos o id
+function criarProduto(nome, preço, categoria) {
+    const adicionarProduto = {
+        id: Produtos.length,
+        nome,
+        preço,
+        categoria
+    }
+    if (nome.length >= 3 && preço > 0 && categoria === 'Eletrônicos' || categoria === 'Alimentos' || categoria === 'Vestuário') {
+        Produtos.push(adicionarProduto)
+    } else {
+        console.log(`Erro ao adicionar ${adicionarProduto.nome}. O Nome deve ter no mínimo 3 caracteres e/ou ${adicionarProduto.preço} preço deve ser um valor maior que 0 e/ou categoria deve ser um das seguintes opções: Eletrônicos, Alimentos ou Vestuários.`);
+    }
 }
-console.log(lerAluno(1))
+criarProduto('Celular', 26.0, 'Eletrônicos')
+criarProduto('Milho', 35.0, 'Alimentos')
+criarProduto('Arroz', 5.0, 'Alimentos')
+criarProduto('Oi', -5.0, 'vbs')
+console.log(Produtos)
 
-// atualizarAluno(id, dados) - recebe o id do aluno e os novos dados
+//LerProduto() - listar todos os produtos cadastrados
+Produtos.map((item) => console.log(`Descrição: ${item.nome} Preço: ${item.preço} Categoria: ${item.categoria}`))
 
-function atualizarAluno({id, ...rest}) {
-    const indice = alunos.findIndex((aluno) => aluno.id === id)
-    const dadosAntigos = alunos[indice]
-    alunos[indice] = {...dadosAntigos,...rest}
+// atualizarProduto(id, dados) - recebe o id do produto e os novos dados
+
+function atualizarProduto({id, ...rest}) {
+    const indice = Produtos.findIndex((produto) => produto.id === id)
+    const dadosAntigos = Produtos[indice]
+    Produtos[indice] = {...dadosAntigos,...rest}
 }
-
-atualizarAluno({id: 1, nome: 'Fulano', serie: '7A'})
-
-console.log(alunos)
-
-// deletarAluno(id) - recebe o id do aluno e deleta o aluno
-
-function deletarAluno(id) {
-    const indice = alunos.findIndex((aluno) => aluno.id === id)
-    alunos.splice(indice, 1)
+atualizarProduto({id: 1, nome: 'Notebook', categoria: 'Eletrônicos'})
+console.log(Produtos)
+// deletarProduto(id) - recebe o id do produto e deleta o produto
+function deletarProduto(id) {
+    const indice = Produtos.findIndex((produto) => produto.id === id)
+    Produtos.splice(indice, 1)
 }
-
-deletarAluno(1)
-console.log(alunos)
+deletarProduto(1)
+console.log(Produtos)
+// BuscarProduto() - recebe o id como parametro e retorna o produto
+function buscarProduto(id) { 
+    const produto = Produtos.find(Produtos => Produtos.id === id)
+    return produto
+}
+console.log(buscarProduto(2))
+ // BuscarProdutoRefinado() - recebe um valor e um filtro (1-id, 2-nome, 3-preço, 4-categoria) e retorna o produto
+function buscarProdutoRefinado(valor, filtro) {   
+    let produto = {}
+    
+    switch(filtro) {
+        case 1:
+             produto = Produtos.find((item) => item.id === valor)
+            break
+        case 2:
+             produto = Produtos.find((item) => item.nome === valor)
+            break
+            case 3:
+             produto = Produtos.find((item) => item.preço === valor)
+            break
+            case 4:
+             produto = Produtos.find((item) => item.categoria === valor)
+            break
+        default:
+        console.log("fim")
+    }
+      return produto
+    }
+    console.log(buscarProdutoRefinado('Celular', 2))
+    console.log(buscarProdutoRefinado(26, 3))
+    console.log(buscarProdutoRefinado('Alimentos', 4))
