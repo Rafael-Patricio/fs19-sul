@@ -1,5 +1,5 @@
 let Produtos = []
-//CiarProduto(nome, preço, categoria) - criar com o id, recebe os dados, menos o id
+//CriarProduto(nome, preço, categoria) - criar com o id, recebe os dados, menos o id
 function criarProduto(nome, preço, categoria) {
     const adicionarProduto = {
         id: Produtos.length,
