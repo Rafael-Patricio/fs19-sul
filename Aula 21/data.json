@@ -1,0 +1,14 @@
+{
+    "products": [
+        {
+            "name": "Mouse",
+            "price": 129.99,
+            "category": "Tecnologia"
+        },
+        {
+            "name": "Teclado",
+            "price": 729.99,
+            "category": "Tecnologia"  
+        }
+    ]
+}
