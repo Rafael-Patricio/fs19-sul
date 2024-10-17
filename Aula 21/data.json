@@ -1,14 +1,20 @@
 {
-    "products": [
-        {
-            "name": "Mouse",
-            "price": 129.99,
-            "category": "Tecnologia"
-        },
-        {
-            "name": "Teclado",
-            "price": 729.99,
-            "category": "Tecnologia"  
-        }
-    ]
+  "products": [
+    {
+      "name": "Mouse",
+      "price": 129.99,
+      "category": "Tecnologia"
+    },
+    {
+      "name": "Teclado",
+      "price": 729.99,
+      "category": "Tecnologia"
+    },
+    {
+      "id": "c6ae",
+      "name": "casa",
+      "price": "2",
+      "category": "Arte"
+    }
+  ]
 }
