@@ -1,14 +1,13 @@
 import './App.css'
 import { Title } from './components/Title'
+import { Description } from './components/Description'
 
 export function App() {
-  const text = 'Hello World!'
-  const description = 'Its my first page'
 
   return (
     <>
-    <Title />
-    <p>{description}</p>
+    <Title value='Hello World!' />
+    <Description value='Its my first page!' />
     </>
   )
 }
